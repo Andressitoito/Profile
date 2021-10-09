@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Andres Ledesma</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="images/shake.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Pavanam&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Open Sans Condensed', sans-serif;
+            }
+            html{
+                font-size: 12px;
+            }
+            body{
+                width: 100%;
+                height: 100%;
+            }
+            /* <!-- INICIO BARRA DE NAVEGACION -->  */
+            .navbar{
+                display: flex;
+            }
+            .navbar-list{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                list-style: none;
+                position: fixed;
+                background-color: white;
+            }
+            .navbar-items{
+                display: inline-block;
+                text-decoration: none;
+                border-radius: 1.5rem;
+                text-transform: uppercase;
+                padding: .5em 1.5em;
+                margin: .5rem .2rem;
+                font-size: 1.3rem;
+                color: #68B8FA;
+            }
+            .navbar-item-contacto{
+                background-color: #68B8FA;
+                color: white;
+                margin-right: 13rem
+            }
+            .navbar-item-contacto:hover{
+                background-color: #D6EAF8;
+                color: #68B8FA;
+                transition: .3s;
+            }
+            /* <!-- FIN BARRA DE NAVEGACION -->  */
+
+            /* <!-- INICIO PRESENTACION --> */
+            .presentacion{
+                display: flex;
+                justify-content: center;
+                margin-top: 4%;
+            }
+            .presentacion-name{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                padding: 4em 4em 4em 12em;
+                justify-content: center;
+            }
+            .pres-spn{
+                display: block
+            }
+            .pres-hi{
+                font-size: 2rem;
+                font-weight: 900;
+            }
+            .pres-name{
+                font-size: 3.5rem;
+                font-weight: 900;
+                color: #68B8FA;
+            }
+            .pres-desc{
+                font-size: 1.5rem;
+                margin-bottom: 1em;
+            }
+            .pres-btn{
+                font-size: 1.5rem;
+                border-radius: 2rem;
+                padding: .5em 1em;
+                text-align: center;
+                text-transform: uppercase;
+                width: 8em;
+                text-decoration: none;
+                background-color: #68B8FA;
+                color: white;
+            }
+            .pres-btn:hover{
+                background-color: #D6EAF8;
+                color: #68B8FA;
+                transition: .3s;
+            }
+            .presentacion-img{
+                width: 50%;
+            }
+            .pres-img{
+                width: 100%;
+                height: 100%;
+            }
+            /* <!-- FIN PRESENTACION --> */
+
+            /* <!-- INICIO MIS CONOCIMIENTOS --> */
+            .conocimientos{
+                display: flex;
+                justify-content: center;
+                background-color: #EBF5FB;
+                padding: 5em;
+            }
+            .conocimientos-box{
+                display: flex;
+                flex-wrap: wrap;
+                width: 900px;
+                justify-content: center;
+            }
+            .conocimientos-title{
+                width: 100%;
+                text-align: center;
+                padding: 1em 5em;
+                margin-bottom: 1.5rem;
+            }
+            .title-h1{
+                font-size: 3rem;
+            }
+            .title-p, .proyectos-p{
+                font-size: 1.5rem;
+            }
+            .conocimientos-img{
+                width: 250px;
+                padding: 3em 3em 4em;
+                border: 1px solid #D5D8DC;
+                border-radius: .5em;
+                margin: .5rem;
+                text-align: center;
+                font-size: 1.5em;
+                font-weight: 900;
+                background-color: #F8F9F9;
+            }
+            .conocimientos-img:hover {
+                border-color: #68B8FA;
+                color: #68B8FA;
+            }
+            .conocimientos-svg{
+                width: 50%;
+            }
+            /* <!-- FIN MIS CONOCIMIENTOS --> */
+
+            /* <!-- INICIO QUOTE --> */
+            .quote{
+                background-color: #D6EAF8;
+                text-align: center;
+                padding: 4em
+            }
+            .quote-comillas{
+                font-size: 3rem;
+                margin-bottom: .5em;
+            }
+            .quote-frase{
+                font-size: 1.5rem;
+                margin-bottom: 2em;
+            }
+            .quote-name{
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+            /* <!-- FIN QUOTE --> */
+
+            /* <!-- INICIO MIS PROYECTOS --> */
+            .proyectos{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background-color: #EBF5FB;
+            }
+            .proyectos-box{
+                width: 70%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .proyectos-title{
+                width: 100%;
+                text-align: center;
+                padding: 5em 13em 1em;
+                margin-bottom: 1.5rem;
+            }
+            .proyectos-item{
+                width: 32%;
+                border: 1px solid #D5D8DC;
+                margin-bottom: 1rem;
+                border-radius: 1em;
+                overflow: hidden;
+                font-size: 1em;
+                background-color: #F8F9F9;
+            }
+            .proyectos-item:hover{
+                border-color: #68B8FA;
+                color: #68B8FA;
+            }
+            .proyectos-img{
+                width: 100%;
+            }
+            /* <!-- FIN MIS PROYECTOS --> */
+
+            /* <!-- INICIO CONTACTO --> */
+
+            /* CONTACTO REDES */
+            .contacto{
+                display: flex;
+                justify-content: center;
+                box-sizing: border-box;
+                padding: 7em 1em 5em;
+            }
+            .contacto-box{
+                border: 1px solid #D5D8DC;
+                border-radius: 2em;
+                display: flex;
+                width: 75%;
+                margin: 5rem;
+            }
+            .contacto-redes-box{
+                width: 50%;
+                padding: 3em;
+                display: flex;
+                flex-direction: column;
+            }
+            .redes-h1{
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            .redes-p{
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            .contacto-redes-items{
+                list-style: none;
+                margin-bottom: 1em;
+            }
+            .redes-icon{
+                color: #68B8FA;
+                background-color: white;
+                border-radius: 2rem;
+                border: 1px solid white;
+                padding: .3em;
+                align-self: flex-end;
+                margin-right: .3rem;
+            }
+            .contacto-redes-link{
+                text-decoration: none;
+                font-size: 1.5rem;
+                color: black;
+                margin: 1em;
+                padding: .2em;
+                border-radius: 1em;
+            }
+            .contacto-redes-link:hover{
+                color: #68B8FA;
+            }
+            .contacto-redes-link:hover .fab, .contacto-redes-link:hover .fas{
+                color: #D6EAF8;
+                background-color: #68B8FA;
+            }
+
+            /* CONTACTO FORMULARIO */
+
+            .contacto-formulario{
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 3em;
+                font-size: 1.3rem;
+            }
+            .form-inp{
+                font-size: 1.3rem;
+                border: none;
+                border-radius: 1em;
+                background-color: #F8F9F9;
+                padding: 0.3em;
+                width: 100%;
+            }
+            .form-inp:focus{
+                outline-style: none;
+                outline-color: transparent;
+                box-shadow: 0px 0px 15px -2px #09FFF8;
+                transition: .5s;
+            }
+            .form-title{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1em;
+            }
+            .form-name{
+                width: 50%;
+                padding: 0.2em;
+            }
+            .form-apellido{
+                width: 50%;
+                padding: 0.2em;
+            }
+            .form-email{
+                width: 100%;
+                padding: 0.2em;
+            }
+            .form-mensaje{
+                width: 100%;
+                padding: 0.2em;
+            }
+            .form-msj{
+                width: 100%;
+                resize: none;
+            }
+            .form-btnbtn{
+                font-size: 1.3rem;
+                border: none;
+                border-radius: 1.5em;
+                background-color: #68B8FA;
+                padding: 0.5em 2em;
+                color: white;
+                margin-left: 0.1rem;
+            }
+            /* <!-- FIN CONTACTO --> */
+
+            /* <!-- INICIO FOOTER --> */
+            .footer{
+                background-color: #68B8FA;
+                display: flex;
+                justify-content: center;
+                padding: 3em;
+            }
+            .footer-box{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            .foot-list{
+                text-transform: uppercase;
+                margin: 1.5rem;
+            }
+            .foot-items{
+                text-decoration: none;
+                color: white;
+                padding: .2em;
+                font-size: 1.3rem;
+                border-radius: 1.5rem;
+            }
+            .foot-redes-box{
+                margin-bottom: 1.5rem;
+            }
+            .hecho-redes{
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+            .foot-red{  
+                color: #68B8FA;
+                padding: .5em;
+                border-radius: 1em;
+                font-size: 1.5rem;
+                background-color: white;
+                border: 1px solid #68B8FA;
+            }
+            .foot-red:hover{
+                color: #D6EAF8;
+                background-color: #68B8FA;
+                border: 1px solid #D6EAF8;
+            }
+            /* ACTIVES */
+            .navbar-items:active, .contacto-redes-link:active, .pres-btn:active, .navbar-item-contacto:active, .conocimientos-img:active, .proyectos-item:active, .form-btnbtn:active, .foot-items:active, .foot-red:active{
+                box-shadow: 0px 0px 15px -2px #09FFF8;
+            }
+            .comilla{
+                background-color: transparent;
+                border: none;
+            }
+
+            @media (max-width: 1240px) {
+                /* PRESENTACION */
+                .presentacion{
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .presentacion-name{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 6em;
+                }
+                .presentacion-img{
+                    width: 100%;
+                }
+                .pres-img{
+                    object-fit: cover;
+                }
+                /* FIN PRESNETACION */
+
+                /* PROYECTOS */
+                .proyectos-title{
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 1.5rem;
+                    padding: 1em;
+                }
+            }
+            @media (max-width: 900px) {
+                /* CONOCIMIENTOS */
+                .conocimientos{
+                    width: 100%;
+                    padding: 0;
+                }
+                .conocimientos-box{
+                    width: 100%;
+                }
+                /* PROYECTOS */
+                .proyectos-box{
+                    width: 100%;
+                }
+                .proyectos-item{
+                    width: 48%;
+                }
+
+                /* CONTACTO */
+                .contacto{
+                    padding: 5em 0em;
+                }
+                .contacto-box{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin: 0;
+                    border: none;
+                }
+                .contacto-redes-box{
+                    width: 100%;
+                    padding: 3em;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .contacto-redes-items{
+                    display: flex;
+                    display: inline-block;
+                    width: 48%;
+                }
+                .contacto-redes-link{
+                    margin: 0;
+                }
+                .contacto-formulario{
+                    width: 100%;
+                }
+            }
+            @media (max-width: 800px) {
+                html{
+                    font-size: 10px;
+                }
+                .navbar-item-contacto{
+                    margin: .5rem .2rem;
+                }
+                .navbar-list{
+                    justify-content: center;
+                }
+            }
+            @media (max-width: 550px) {
+                /* PROYECTOS */
+                .proyectos-box{
+                    width: 100%;
+                    justify-content: center;
+                }
+                .proyectos-item{
+                    width: 90%;
+                }
+                .foot-list{
+                    display: none;
+                }
+            }
+            @media (max-width: 500px) {
+                /* CONTACTO */
+                .contacto-redes-items{
+                    display: block;
+                    width: 100%;
+                }
+                .navbar-items{
+                    margin: .5rem 0;
+                }
+            }
+            /* 01.34.46 TIEMPO PARA ARMAR TODO EL HTML */
+            /* 06.09.22 TIEMPO PARA HACER EL CSS */
+            /* 01.47.50 TIEMPO TOTAL QUERIES */
+            /* ---- 09.30.09 TIEMPO TOTAL PARA TODO ---- */
+        </style>
+    </head>
+    <body>
+        <!-- INICIO BARRA DE NAVEGACION -->
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <a href="#pres" class="navbar-items"><li  >hola</li></a>
+                <a href="#conoc" class="navbar-items"><li >conocimientos</li></a>
+                <a href="#proyect" class="navbar-items"><li >proyetos</li></a>
+                <a href="#contact" class="navbar-items navbar-item-contacto"><li >contacto</li></a>
+            </ul>
+        </nav>
+        <!-- FIN BARRA DE NAVEGACION -->
+        
+        <!-- INICIO PRESENTACION -->
+        <section id="pres" class="presentacion">
+            <div class="presentacion-name">
+                <span class="pres-spn pres-hi">Hola! Soy</span>
+                <span class="pres-spn pres-name">Andres Ledesma</span>
+                <span class="pres-spn pres-desc">Desarrollador, aventurero</span>
+                <a href="#proyect" class="pres-spn pres-btn">lo que hago</a>
+            </div>
+            <div class="presentacion-img">
+                <img class="pres-img" src="images/inicio.jpg" alt="inicio">
+            </div>
+        </section>
+        <!-- FIN PRESENTACION -->
+
+        <!-- INICIO MIS CONOCIMIENTOS -->
+        <section id="conoc" class="conocimientos">
+            <div class="conocimientos-box">
+                <div class="conocimientos-title">
+                    <h1 class="title-h1">Mis conocimientos</h1>
+                    <p class="title-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quo in numquam possimus exercitationem consectetur quisquam magnam accusantium ex unde </p>
+                </div>
+                <div class="conocimientos-img">
+                    <img class="conocimientos-svg" src="images/html5.svg" alt="html5">
+                    <p class="conoc-svg-text">HTML-5</p>
+                </div>
+                <div class="conocimientos-img">
+                    <img class="conocimientos-svg" src="images/css-3.svg" alt="CSS">
+                    <p class="conoc-svg-text">CSS 3</p>
+                </div>
+                <div class="conocimientos-img">
+                    <img class="conocimientos-svg" src="images/sass.svg" alt="Sass">
+                    <p class="conoc-svg-text">Sass</p>
+                </div>
+                <div class="conocimientos-img">
+                    <img class="conocimientos-svg" src="images/javascript.svg" alt="Javascript">
+                    <p class="conoc-svg-text">JavaScript</p>
+                </div>
+                <div class="conocimientos-img">
+                    <img class="conocimientos-svg" src="images/react.svg" alt="react">
+                    <p class="conoc-svg-text">React</p>
+                </div>
+                <div class="conocimientos-img">
+                    <img class="conocimientos-svg" src="images/Git.svg" alt="Git">
+                    <p class="conoc-svg-text">GitHub</p>
+                </div>
+            </div>
+            </div>
+        </section>        
+        <!-- FIN MIS CONOCIMIENTOS -->
+
+        <!-- INICIO QUOTE -->
+        <section class="quote">
+            <p class="quote-comillas"><i class="fas fa-quote-right comilla"></i></p>
+            <p class="quote-frase">"La gloria no está en no caerse nunca, sino en volver a levantarse cada vez que te caes."</p>
+            <p class="quote-name">Proverbio chino</p>
+        </section>
+        <!-- FIN QUOTE -->
+
+        <!-- INICIO MIS PROYECTOS -->
+        <section id="proyect" class="proyectos">
+            <div class="proyectos-box">
+                <div class="proyectos-title">
+                    <h1 class="title-h1">Mis proyectos</h1>
+                    <p class="title-p">No soy un pionero de nada. Las cosas no se hacen para ser el primero, sino porque amas hacerlas, porque te enamoras del proyecto. (David Linch)</p>
+                </div>
+                <div class="proyectos-item">
+                    <img class="proyectos-img" src="images/portfolio.jpg" alt="portfolio">
+                    <p class="proyectos-p">Portfolio</p>
+                </div>
+                <div class="proyectos-item">
+                    <img class="proyectos-img" src="images/memes.jpg" alt="generador de memes">
+                    <p class="proyectos-p">Generador de memes</p>
+
+                </div>
+                <div class="proyectos-item">
+                    <img class="proyectos-img" src="images/match 3.jpg" alt="match 3">
+                    <p class="proyectos-p">Match-3</p>
+                </div>
+                <div class="proyectos-item">
+                    <img class="proyectos-img" src="images/budget.jpg" alt="controlador de gastos">
+                    <p class="proyectos-p">Administrador de gastos</p>
+                </div>
+                <div class="proyectos-item">
+                    <img class="proyectos-img" src="images/meeting.jpg" alt="administrador de eventos">
+                    <p class="proyectos-p">Meeting Manager</p>
+                </div>
+                <div class="proyectos-item">
+                    <img class="proyectos-img" src="images/apps.jpg" alt="aplicaciones">
+                    <p class="proyectos-p">Aplicaciones</p>
+                </div>
+                <div class="proyectos-item">
+                    <img class="proyectos-img" src="images/movies.jpg" alt="movies">
+                    <p class="proyectos-p">Buscador de Peliculas</p>
+                </div>
+            </div>
+        </section>
+        <!-- FIN MIS PROYECTOS -->
+
+       <!-- INICIO CONTACTO -->
+       <section id="contact" class="contacto">
+        <div class="contacto-box">
+            <div class="contacto-redes-box">
+                <h1 class="title-h1 redes-h1">Contacto</h1>
+                <p class="title-p redes-p">"El trabajo hecho con gusto y con amor, siempre es una creación original y única."<br>(Roberto Sapriza)</p>
+                <ul class="contacto-redes">
+                    <li class="contacto-redes-items">
+                        <a class="contacto-redes-link" href="">
+                            <i  class="fab fa-twitter redes-icon" ></i>@Andresitoito
+                        </a>
+                    </li>
+                    <li class="contacto-redes-items">
+                        <a class="contacto-redes-link" href="">
+                            <i  class="fab fa-github redes-icon" > </i>@Andresitoito
+                        </a>
+                    </li>
+                    <li class="contacto-redes-items">
+                        <a class="contacto-redes-link" href="">
+                            <i  class="fab fa-linkedin-in redes-icon" ></i>@Andresitoito
+                        </a>
+                    </li>
+                    <li class="contacto-redes-items">
+                        <a class="contacto-redes-link" href="mailto:andresledesma87@gmail.com">
+                            <i  class="fas fa-at redes-icon" ></i>Andresledesma87@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="contacto-formulario">
+                <div class="form-title">
+                    <h1 class="title-h1">Escribime</h1>
+                </div>
+                <div class="form-name">
+                    <p>Nombre*</p>
+                    <input class="form-name-inp form-inp" required type="text" name="username" maxlength="30" placeholder="Andres" required="required">
+                </div>
+                <div class="form-apellido">
+                    <p>Apellido*
+                    <input class="form-ap form-inp" required type="text" name="apellido" maxlength="30" required placeholder="Ledesma" required="required"></p>
+                </div>
+                <div class="form-email">
+                    <p>Mail*</p>
+                    <input class="form-em form-inp" type="email" required placeholder="Andres@Ledesma.com" required="required">
+                </div>
+                <div class="form-mensaje">
+                    <p>Mensaje*</p>
+                    <textarea class="form-msj form-inp" name="mensaje" required rows="8" placeholder="Escriba su mensaje aqui"></textarea>
+                </div>
+                <div class="form-btn">
+                    <input class="form-btnbtn" type="submit" name="enviar" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- FIN CONTACTO -->
+
+    <!-- INICIO FOOTER -->
+    <section class="footer">
+        <div class="footer-box">
+            <ul class="foot-list">
+                <a href="#pres" class="foot-items">hola</a>
+                <a href="#conoc" class="foot-items">conocimientos</a>
+                <a href="#proyect" class="foot-items">proyetos</a>
+                <a href="#contact" class="foot-items">contacto</a>
+            </ul>
+            <ul class="foot-redes-box">
+                <a href=""><i  class="fab fa-twitter foot-red" ></i></a>
+                <a href=""><i  class="fab fa-github foot-red"></i></a>
+                <a href=""><i  class="fab fa-linkedin-in foot-red" ></i></a>
+                <a href="mailto:andresledesma87@gmail.com" ><i  class="fas fa-at foot-red" ></i></a>
+            </ul>
+            <p class="hecho-redes">Hecho con ❤️ por Andres Ledesma</p>
+        </div>
+    </section>
+
+    <!-- FIN FOOTER -->
+    <!-- <a href="https://icons8.com/icon/ssRp7izhImZ4/hand-shake">Hand Shake icon by Icons8</a> -->
+
+    </body>
+</html>
+
+
