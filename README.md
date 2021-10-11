@@ -1,3 +1,3 @@
 # Profile
  
-![Imagen de una pc](../Profile/images/portfolio.jpg)
+![Imagen de una pc](../images/portfolio.jpg)
