@@ -1,3 +1,5 @@
 # Profile
+ Esta es mi primera para parte! 
  
-![Imagen de una pc](https://github.com/Andressitoito/Profile/blob/main/images/portfolio.jpg)
+ Hola!
+![Imagen de mi portada Hola!](https://github.com/Andressitoito/Profile/blob/main/images/Hola.jpg)
